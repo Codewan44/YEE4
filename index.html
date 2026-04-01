@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YebWeb - Création de sites web en Côte d'Ivoire</title>
+
+<meta name="description" content="Création de sites web modernes pour restaurants, boutiques et entreprises en Côte d'Ivoire.">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+header{
+position:sticky;
+top:0;
+background:#0f172a;
+z-index:100;
+text-align:center;
+padding:10px;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+color:#22c55e;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+background:linear-gradient(90deg,#6366f1,#06b6d4);
+padding:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#facc15;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h2{
+font-size:38px;
+color:#38bdf8;
+}
+
+.hero img{
+width:100%;
+max-width:500px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.btn{
+background:#22c55e;
+padding:15px 25px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:20px;
+}
+
+.services{
+padding:50px;
+}
+
+.sector{
+margin-bottom:40px;
+cursor:pointer;
+}
+
+.sector h2{
+text-align:center;
+color:#38bdf8;
+}
+
+.cards-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:20px;
+max-height:0;
+overflow:hidden;
+transition:0.5s;
+}
+
+.cards-grid.active{
+max-height:1000px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.card:hover{
+transform:scale(1.06);
+}
+
+.pricing{
+text-align:center;
+padding:50px;
+background:#020617;
+}
+
+.price{
+display:inline-block;
+background:#1e293b;
+padding:30px;
+margin:20px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.testimonials{
+background:#020617;
+padding:60px 20px;
+text-align:center;
+}
+
+.testimonial{
+display:none;
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+margin-top:20px;
+font-style:italic;
+}
+
+.testimonial.active{
+display:block;
+}
+
+.client-name{
+margin-top:10px;
+font-weight:bold;
+color:#22c55e;
+}
+
+.order{
+padding:50px;
+text-align:center;
+background:#0a0f1f;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+input,textarea{
+padding:12px;
+margin:10px;
+width:100%;
+max-width:500px;
+border-radius:5px;
+border:none;
+}
+
+.payment-logos{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:20px;
+}
+
+.payment-logo{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+color:white;
+font-size:14px;
+text-decoration:none;
+transition:transform 0.3s;
+}
+
+.payment-logo img{
+width:60px;
+height:60px;
+border-radius:10px;
+margin-bottom:5px;
+}
+
+.payment-logo:hover{
+transform:scale(1.1);
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">YebWeb</div>
+
+<nav>
+<a href="#">Accueil</a>
+<a href="#services">Services</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#order-section">Contactez-nous</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Boostez votre business avec un site web moderne</h2>
+
+<p>Nous créons des sites web performants et professionnels pour entrepreneurs et startups.</p>
+
+<a class="btn" href="#order-section">Commander maintenant</a>
+
+<br>
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+</section>
+
+<section id="services" class="services">
+
+<!-- RESTAURANT -->
+
+<div class="sector">
+
+<h2>Restaurant</h2>
+
+<div class="cards-grid">
+
+<div class="card" data-pack="Starter Pack Restaurant">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
+<h3>Starter Pack</h3>
+</div>
+
+<div class="card" data-pack="Business Pack Restaurant">
+<img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee">
+<h3>Business Pack</h3>
+</div>
+
+<div class="card" data-pack="Premium Pack Restaurant">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+<h3>Premium Pack</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- BOUTIQUE -->
+
+<div class="sector">
+
+<h2>Boutique</h2>
+
+<div class="cards-grid">
+
+<div class="card" data-pack="Starter Pack Boutique">
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8">
+<h3>Starter Pack</h3>
+</div>
+
+<div class="card" data-pack="Business Pack Boutique">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
+<h3>Business Pack</h3>
+</div>
+
+<div class="card" data-pack="Premium Pack Boutique">
+<img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47">
+<h3>Premium Pack</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- GYM -->
+
+<div class="sector">
+
+<h2>Gym</h2>
+
+<div class="cards-grid">
+
+<div class="card" data-pack="Starter Pack Gym">
+<img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1">
+<h3>Starter Pack</h3>
+</div>
+
+<div class="card" data-pack="Business Pack Gym">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+<h3>Business Pack</h3>
+</div>
+
+<div class="card" data-pack="Premium Pack Gym">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+<h3>Premium Pack</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- AUTRES -->
+
+<div class="sector">
+
+<h2>Autres</h2>
+
+<div class="cards-grid">
+
+<div class="card" data-pack="Starter Pack Autres">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+<h3>Starter Pack</h3>
+</div>
+
+<div class="card" data-pack="Business Pack Autres">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<h3>Business Pack</h3>
+</div>
+
+<div class="card" data-pack="Premium Pack Autres">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<h3>Premium Pack</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tarifs" class="pricing">
+
+<h2>Tarifs</h2>
+
+<div class="price" data-pack="Starter">
+<h3>Starter</h3>
+<p>Site professionel simple</p>
+<p>60 000 XOF</p>
+</div>
+
+<div class="price" data-pack="Business">
+<h3>Business</h3>
+<p>Bouton WhatsApp activé pour commande directe</p>
+<p>170 000 XOF</p>
+</div>
+
+<div class="price" data-pack="Premium">
+<h3>Premium</h3>
+<p>Site professionel complet</p>
+<p>350 000 XOF</p>
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>Ce que disent nos clients 🇨🇮</h2>
+
+<div class="testimonial active">
+⭐⭐⭐⭐⭐
+<p>Depuis que YebWeb a créé le site de mon restaurant à Cocody, j'ai beaucoup plus de clients.</p>
+<div class="client-name">— Kouassi Jean</div>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐
+<p>Très bon travail pour ma boutique en ligne.</p>
+<div class="client-name">— Awa Koné</div>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐
+<p>Le site que YebWeb a créé pour mon espace fitness attire beaucoup de nouveaux membres.</p>
+<div class="client-name">— Koffi Arnaud</div>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐
+<p>Bon service global et communication facile via WhatsApp.</p>
+<div class="client-name">— Yao Patrick</div>
+</div>
+
+</section>
+
+<section id="order-section" class="order">
+
+<h2>Commande rapide</h2>
+
+<input type="text" id="name" placeholder="Votre nom">
+
+<input type="tel" id="phone" placeholder="Votre WhatsApp">
+
+<textarea id="site" placeholder="Faites-nous savoir le type de site que vous voulez"></textarea>
+
+<br>
+
+<a class="btn" href="#" id="sendOrder">Envoyer la commande</a>
+
+<div class="payment-logos">
+
+<a href="https://play.google.com/store/apps/details?id=com.orange.money" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Orange_Money_logo.png">
+<span>Orange Money</span>
+</a>
+
+<a href="https://play.google.com/store/apps/details?id=com.mtn.momo" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/MTN_Mobile_Money_logo.png">
+<span>MTN Mobile Money</span>
+</a>
+
+<a href="https://play.google.com/store/apps/details?id=com.moov.momo" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Moov_Money_logo.png">
+<span>Moov Money</span>
+</a>
+
+<a href="https://play.google.com/store/apps/details?id=com.wave.personal" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Wave_logo.png">
+<span>wave</span>
+</a>
+
+<a href="https://www.visa.com" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png">
+<span>Visa</span>
+</a>
+
+<a href="https://www.mastercard.com" class="payment-logo" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+<span>Mastercard</span>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>WhatsApp : +233 05 70 64 26 49</p>
+
+<p>© 2026 YebWeb</p>
+
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/2330570642649">WhatsApp</a>
+
+<script>
+
+document.querySelectorAll(".sector").forEach(sector=>{
+let grid=sector.querySelector(".cards-grid");
+sector.addEventListener("click",()=>{
+grid.classList.toggle("active");
+});
+});
+
+document.querySelectorAll(".card").forEach(card=>{
+card.addEventListener("click",(e)=>{
+e.stopPropagation();
+let pack=card.dataset.pack;
+document.getElementById("site").value=pack;
+document.getElementById("tarifs").scrollIntoView({behavior:"smooth"});
+});
+});
+
+document.querySelectorAll(".price").forEach(price=>{
+price.addEventListener("click",()=>{
+document.getElementById("site").value=price.dataset.pack+" Pack";
+document.getElementById("order-section").scrollIntoView({behavior:"smooth"});
+});
+});
+
+document.getElementById("sendOrder").addEventListener("click",(e)=>{
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let site=document.getElementById("site").value;
+
+window.open(`https://wa.me/2330570642649?text=${encodeURIComponent("Bonjour je m'appelle "+name+" et je veux commander un "+site+" . Mon WhatsApp: "+phone)}`);
+
+});
+
+let testimonials=document.querySelectorAll(".testimonial");
+let index=0;
+
+setInterval(()=>{
+testimonials.forEach(t=>t.classList.remove("active"));
+index=(index+1)%testimonials.length;
+testimonials[index].classList.add("active");
+},4000);
+
+</script>
+
+</body>
+</html>
